@@ -1,0 +1,3 @@
+class PdfRenderer
+  # magic
+end

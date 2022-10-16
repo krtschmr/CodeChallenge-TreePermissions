@@ -1,0 +1,2 @@
+class Section < TemplateNode
+end
