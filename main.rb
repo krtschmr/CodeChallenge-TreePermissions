@@ -1,0 +1,15 @@
+require 'sqlite3'
+require 'active_record'
+require 'pry'
+require 'rspec'
+include RSpec::Matchers
+
+require_relative 'setup/db'
+require_relative 'models/user'
+require_relative 'models/group_membership'
+require_relative 'models/group'
+require_relative 'models/folder'
+require_relative 'models/document'
+require_relative 'setup/seeds'
+require_relative 'abilities'
+require_relative 'codechallenge'
