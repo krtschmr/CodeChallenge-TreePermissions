@@ -30,11 +30,11 @@ require_relative 'lib/pdf_renderer'
 # Our customers expect from our PDF to have a Header which contains the Template name, a footer which contains 
 # the current page number. Also, each Section must begin on a new page. However, they would like to also have an option to toggle the Header and Footer on/off.
 #
-# A Template contais TemplateNodes, please look at models/template_nodes and setup/seeds. 
+# A Template contains TemplateNodes, please look at models/template_nodes and setup/seeds. 
 # Since we are software engineers, we like to write maintainable, testable high quality code. That's why need you!
 # In the past, we used regular rails views to construct the HTML, but it is already 2022. We would like to move all this logic into a well designed
 # pure ruby component, which accepts a Template and returns us the constructed HTML.
-# We keep testing in mind and believe that an efficient way to test each "component" of a template shall be done individually. 
+# We keep testing in mind and believe that an efficient way of testing would allow to test the Template in its whole but also each "component" on their own.
 #
 # One special requirement is the "annotated" mode. When this mode is enabled, each element of the template should 
 # have a blue border, so that people can see exactly how much space an element takes (imagine there are 2 paragraphs next 
