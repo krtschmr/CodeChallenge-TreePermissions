@@ -25,6 +25,10 @@ require_relative 'lib/pdf_renderer'
 # <htmlpagefooter></htmlpagefooter> # Everything inside there (can be html) will magically be 
 #                                   # added to each page as a footer. Needs to be included in the HTML just once.
 # <pagebreak />                     # It forces to create a new page in our PDF
+# ${page_num}                       # Wherever this is, the current PDF page number will be written
+#
+# Our customers expect from our PDF to have a Header which contains the Template name, a footer which contains 
+# the current page number. Also, each Section must begin on a new page. However, they would like to also have an option to toggle the Header and Footer on/off.
 #
 # A Template contais TemplateNodes, please look at models/template_nodes and setup/seeds. 
 # Since we are software engineers, we like to write maintainable, testable high quality code. That's why need you!
@@ -36,7 +40,7 @@ require_relative 'lib/pdf_renderer'
 # have a blue border, so that people can see exactly how much space an element takes (imagine there are 2 paragraphs next 
 # to each other, which would be just rendererd as a big text. With the annotated mode, you would see each paragraph in his own blue box.)
 # 
-# It is your task to find a modern and flexible way 
+# It is your task to find a modern and flexible way to cover as many requirements as possible. Since we are looking for a teamplayer, you can always communicate with us.
 
 # Possible test scenarios (just dummy code for inspiration)
 
