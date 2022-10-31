@@ -13,5 +13,10 @@ require_relative 'setup/seeds'
 require_relative 'lib/pdf_renderer'
 
 template = Template.first
-puts template.to_pdf
+# returns the html
+# puts template.to_pdf 
+
+# returns html with annotated boxes
+pp  template.to_pdf(annotated: true) 
+
 binding.pry

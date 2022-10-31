@@ -23,7 +23,6 @@ Template.create!(name: 'Test for PDF').tap do |template|
     Heading.create!(parent: section, position: 4, heading_level: 3, title: 'how')
     Heading.create!(parent: section, position: 5, heading_level: 2, title: 'are')
     Heading.create!(parent: section, position: 6, heading_level: 1, title: 'you?')
-    
   end
 end
 
