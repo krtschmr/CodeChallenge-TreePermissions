@@ -1,14 +1,18 @@
 class User < ActiveRecord::Base
+  [:read, :write, :manage].each{ |sym| define_method("can_#{sym}?") {|name| can?(sym, name)} }
+  
+  has_many :group_memberships
+  has_many :groups, through: :group_memberships
   validates :name, presence: true
 
+  
+  
 
-  def can_read?(object)
-  end
+  private
 
-  def can_write?(object)
-  end
-
-  def can_manage?(object)
+  def can?(what, name)
+    return true
+    # folder = Folder.find_by(name: name)    
   end
   
 end

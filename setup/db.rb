@@ -6,14 +6,24 @@ ActiveRecord::Schema.define do
     t.string :name, null: false
   end
 
+  create_table :groups, force: true do |t|
+    t.string :name, null: false
+  end
+
+  create_table :group_memberships, force: true do |t|
+    t.references :user
+    t.references :group
+  end
+  
   create_table :folders, force: true do |t|
     t.string :name, null: false
     t.integer :parent_id, null: true    
   end
 
-  create_table :documents, force: true do |t|
-    t.string :name, null: false
-    t.integer :folder_id, null: false
-  end
+  # create_table :documents, force: true do |t|
+  #   t.string :name, null: false
+  #   t.integer :folder_id, null: false
+  # end
+  
   
 end
